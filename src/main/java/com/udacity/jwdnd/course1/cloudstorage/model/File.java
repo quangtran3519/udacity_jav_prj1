@@ -4,9 +4,10 @@ public class File {
 
     private Integer fileId;
     private String fileName;
+    private String contentType;
+    private byte[] fileData;
 
-    private String content;
-    private byte[] data;
+    private String fileSize;
 
     private Integer userId;
 
@@ -26,20 +27,28 @@ public class File {
         this.fileName = fileName;
     }
 
-    public String getContent() {
-        return content;
+    public String getContentType() {
+        return contentType;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
-    public byte[] getData() {
-        return data;
+    public byte[] getFileData() {
+        return fileData;
     }
 
-    public void setData(byte[] data) {
-        this.data = data;
+    public void setFileData(byte[] fileData) {
+        this.fileData = fileData;
+    }
+
+    public String getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(String fileSize) {
+        this.fileSize = fileSize;
     }
 
     public Integer getUserId() {
