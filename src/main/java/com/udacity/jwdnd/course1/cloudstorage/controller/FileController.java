@@ -66,7 +66,7 @@ public class FileController {
 
     @GetMapping("/delete")
     public String deleteFile(@RequestParam("id") int fileId, RedirectAttributes redirectAttributes) {
-        if (fileId > 0) {
+        if (fileId == 0) {
             redirectAttributes.addAttribute("error", "File id is empty");
             return "redirect:/home/result?error";
         }

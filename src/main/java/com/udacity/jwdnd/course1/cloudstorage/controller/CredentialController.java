@@ -53,7 +53,7 @@ public class CredentialController {
 
     @GetMapping("/delete")
     public String deleteFile(@RequestParam("id") int credentialId, RedirectAttributes redirectAttributes) {
-        if (credentialId > 0) {
+        if (credentialId == 0) {
             redirectAttributes.addFlashAttribute("error", "Credential id is empty");
             return "redirect:/home/result?error";
         }

@@ -58,7 +58,7 @@ public class NoteController {
 
     @GetMapping("/delete")
     public String deleteFile(@RequestParam("id") int noteId, RedirectAttributes redirectAttributes) {
-        if (noteId > 0) {
+        if (noteId == 0) {
             redirectAttributes.addFlashAttribute("error", "Note id is empty");
             return "redirect:/home/result?error";
         }
